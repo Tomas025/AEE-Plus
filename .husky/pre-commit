@@ -1,0 +1,7 @@
+echo "Verificando erros de linting no frontend..."
+npm run lint || (
+  echo "Erros de linting encontrados. Corrija-os antes de prosseguir."
+  exit 1
+)
+
+echo "Concluido"
