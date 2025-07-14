@@ -17,7 +17,7 @@ export default async function PrivateLayout({
   // }
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-gray-100">
       <NavBar />
       {children}
     </div>

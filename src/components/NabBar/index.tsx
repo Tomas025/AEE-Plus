@@ -39,7 +39,7 @@ export function NavBar() {
         />
         <div className="whitespace-nowrap">
           <p className="font-bold">Maria Fulana</p>
-          <p className="text-sm font-semibold">Professor (a)</p>
+          <p className="text-sm font-semibold text-gray-300">Professor (a)</p>
         </div>
       </div>
     </nav>
