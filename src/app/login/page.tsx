@@ -23,12 +23,9 @@ export default function LoginPage() {
         </p>
       </div>
       <div className="flex min-h-screen w-1/2 flex-col items-center justify-center p-10">
-        <div
-          className="mb-12 flex flex-col items-center justify-center"
-          style={{ width: "calc-size(fit-content, size + 40px)" }}
-        >
+        <div className="mb-12 flex flex-col items-center justify-center">
           <p className="text-3xl font-bold">Entrar</p>
-          <div className="w-full rounded-full border-3 border-blue-500" />
+          <div className="w-40 rounded-full border-3 border-blue-500" />
         </div>
         <form
           onSubmit={(e) => {
