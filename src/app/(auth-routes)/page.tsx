@@ -1,103 +1,182 @@
 import Image from "next/image";
+import { FiEdit2, FiTrash2 } from "react-icons/fi";
+import { PiEyeBold, PiPencilRuler, PiStudentBold } from "react-icons/pi";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className="grid min-h-screen grid-rows-[20px_1fr_20px] items-center justify-items-center gap-16 p-8 pb-20 font-[family-name:var(--font-geist-sans)] sm:p-20">
-      <main className="row-start-2 flex flex-col items-center gap-[32px] sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-center font-[family-name:var(--font-geist-mono)] text-sm/6 sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="rounded bg-black/[.05] px-1 py-0.5 font-[family-name:var(--font-geist-mono)] font-semibold dark:bg-white/[.06]">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex flex-col items-center gap-4 sm:flex-row">
-          <a
-            className="bg-foreground text-background flex h-10 items-center justify-center gap-2 rounded-full border border-solid border-transparent px-4 text-sm font-medium transition-colors hover:bg-[#383838] sm:h-12 sm:w-auto sm:px-5 sm:text-base dark:hover:bg-[#ccc]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="flex h-10 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-4 text-sm font-medium transition-colors hover:border-transparent hover:bg-[#f2f2f2] sm:h-12 sm:w-auto sm:px-5 sm:text-base md:w-[158px] dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <div className="flex min-h-full w-screen flex-col items-center gap-y-10 p-10">
+      <div className="flex w-full items-center justify-between">
+        <div className="flex items-center gap-x-2.5">
+          <Image
+            width={68}
+            height={68}
+            src={"/Perfil.png"}
+            alt="Foto de Perfil"
+            className="rounded-full"
+          />
+          <div className="space-y-1">
+            <p className="text-xl font-semibold">Maria Fulana</p>
+            <p className="text-sm text-[#717171]">Bem vindo Maria Fulana!</p>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex flex-wrap items-center justify-center gap-[24px]">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        <div className="flex items-center gap-x-5">
+          <div className="flex w-60 items-center justify-between rounded-lg bg-[#06B6D44D] p-5">
+            <div className="space-y-2">
+              <p className="text-xl">Alunos</p>
+              <p className="text-4xl font-bold">30</p>
+            </div>
+            <PiStudentBold className="text-5xl text-[#06B6D4]" />
+          </div>
+          <div className="flex w-60 items-center justify-between rounded-lg bg-[#EC48994D] p-5">
+            <div className="space-y-2">
+              <p className="text-xl">Alunos</p>
+              <p className="text-4xl font-bold">6</p>
+            </div>
+            <PiPencilRuler className="text-5xl text-[#EC4899]" />
+          </div>
+          <div className="flex w-60 flex-col items-center rounded-lg bg-white p-5">
+            <p className="text-xl font-medium">Performance Geral</p>
+            <Image
+              src={"/Group 73.svg"}
+              alt="Performance"
+              width={100}
+              height={100}
+            />
+          </div>
+        </div>
+      </div>
+      <div className="flex w-full flex-col items-center gap-y-3 rounded-lg bg-white p-5">
+        <div className="flex w-full items-center justify-between">
+          <p className="text-lg font-semibold text-gray-950">Minhas Turmas</p>
+          <button className="rounded-lg bg-blue-500 px-2 py-2.5 font-semibold text-white">
+            Criar nova turma
+          </button>
+        </div>
+        <table className="w-full border border-gray-300">
+          <thead>
+            <tr className="w-full border border-gray-300 text-sm font-bold text-gray-950">
+              <th className="px-4 py-6 text-start">Id</th>
+              <th className="px-4 py-6 text-start">Nome da Turma</th>
+              <th className="px-4 py-6 text-start">Quantidade de Alunos</th>
+              <th className="px-4 py-6 text-start">Ações</th>
+            </tr>
+          </thead>
+          <tbody className="w-full text-sm text-gray-700">
+            <tr className="border border-gray-300">
+              <td className="px-4 py-6">1</td>
+              <td className="px-4 py-6">Turma 1</td>
+              <td className="px-4 py-6">5</td>
+              <td className="flex gap-x-2 px-4 py-6">
+                <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-xl text-white">
+                  <PiEyeBold />
+                </button>
+                <button className="rounded-lg bg-amber-500 px-5 py-2.5 text-xl text-white">
+                  <FiEdit2 />
+                </button>
+                <button className="rounded-lg bg-red-500 px-5 py-2.5 text-xl text-white">
+                  <FiTrash2 />
+                </button>
+              </td>
+            </tr>
+            <tr className="border border-gray-300">
+              <td className="px-4 py-6">1</td>
+              <td className="px-4 py-6">Turma 1</td>
+              <td className="px-4 py-6">5</td>
+              <td className="flex gap-x-2 px-4 py-6">
+                <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-xl text-white">
+                  <PiEyeBold />
+                </button>
+                <button className="rounded-lg bg-amber-500 px-5 py-2.5 text-xl text-white">
+                  <FiEdit2 />
+                </button>
+                <button className="rounded-lg bg-red-500 px-5 py-2.5 text-xl text-white">
+                  <FiTrash2 />
+                </button>
+              </td>
+            </tr>
+            <tr className="border border-gray-300">
+              <td className="px-4 py-6">1</td>
+              <td className="px-4 py-6">Turma 1</td>
+              <td className="px-4 py-6">5</td>
+              <td className="flex gap-x-2 px-4 py-6">
+                <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-xl text-white">
+                  <PiEyeBold />
+                </button>
+                <button className="rounded-lg bg-amber-500 px-5 py-2.5 text-xl text-white">
+                  <FiEdit2 />
+                </button>
+                <button className="rounded-lg bg-red-500 px-5 py-2.5 text-xl text-white">
+                  <FiTrash2 />
+                </button>
+              </td>
+            </tr>
+            <tr className="border border-gray-300">
+              <td className="px-4 py-6">1</td>
+              <td className="px-4 py-6">Turma 1</td>
+              <td className="px-4 py-6">5</td>
+              <td className="flex gap-x-2 px-4 py-6">
+                <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-xl text-white">
+                  <PiEyeBold />
+                </button>
+                <button className="rounded-lg bg-amber-500 px-5 py-2.5 text-xl text-white">
+                  <FiEdit2 />
+                </button>
+                <button className="rounded-lg bg-red-500 px-5 py-2.5 text-xl text-white">
+                  <FiTrash2 />
+                </button>
+              </td>
+            </tr>
+            <tr className="border border-gray-300">
+              <td className="px-4 py-6">1</td>
+              <td className="px-4 py-6">Turma 1</td>
+              <td className="px-4 py-6">5</td>
+              <td className="flex gap-x-2 px-4 py-6">
+                <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-xl text-white">
+                  <PiEyeBold />
+                </button>
+                <button className="rounded-lg bg-amber-500 px-5 py-2.5 text-xl text-white">
+                  <FiEdit2 />
+                </button>
+                <button className="rounded-lg bg-red-500 px-5 py-2.5 text-xl text-white">
+                  <FiTrash2 />
+                </button>
+              </td>
+            </tr>
+            <tr className="border border-gray-300">
+              <td className="px-4 py-6">1</td>
+              <td className="px-4 py-6">Turma 1</td>
+              <td className="px-4 py-6">5</td>
+              <td className="flex gap-x-2 px-4 py-6">
+                <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-xl text-white">
+                  <PiEyeBold />
+                </button>
+                <button className="rounded-lg bg-amber-500 px-5 py-2.5 text-xl text-white">
+                  <FiEdit2 />
+                </button>
+                <button className="rounded-lg bg-red-500 px-5 py-2.5 text-xl text-white">
+                  <FiTrash2 />
+                </button>
+              </td>
+            </tr>
+            <tr className="border border-gray-300">
+              <td className="px-4 py-6">1</td>
+              <td className="px-4 py-6">Turma 1</td>
+              <td className="px-4 py-6">5</td>
+              <td className="flex gap-x-2 px-4 py-6">
+                <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-xl text-white">
+                  <PiEyeBold />
+                </button>
+                <button className="rounded-lg bg-amber-500 px-5 py-2.5 text-xl text-white">
+                  <FiEdit2 />
+                </button>
+                <button className="rounded-lg bg-red-500 px-5 py-2.5 text-xl text-white">
+                  <FiTrash2 />
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 }
