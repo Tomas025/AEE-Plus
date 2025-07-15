@@ -16,7 +16,7 @@ export function CardProfile({ isStudent = false }: { isStudent?: boolean }) {
       />
       <div className="self-start px-7">
         <p>
-          <strong>Nome:</strong> Maria Fulana
+          <strong>Nome:</strong> Usuário Teste
         </p>
         <p>
           <strong>Contato:</strong> (81) 99999-9999
@@ -25,7 +25,7 @@ export function CardProfile({ isStudent = false }: { isStudent?: boolean }) {
           <strong>CPF:</strong> 999.999.999-99
         </p>
         <p>
-          <strong>Email:</strong> mariafulana@gmail.com
+          <strong>Email:</strong> usuario-teste@gmail.com
         </p>
         <p>
           <strong>Data de Nascimento:</strong> 01/01/2000

@@ -41,7 +41,7 @@ export function NavBar() {
         />
         <div className="whitespace-nowrap">
           <Link href={"/viewProfile"} className="font-bold">
-            Maria Fulana
+            Usuário Teste
           </Link>
           <p className="text-sm font-semibold text-gray-300">Professor (a)</p>
         </div>

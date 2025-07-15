@@ -16,8 +16,8 @@ export default function HomePage() {
             className="rounded-full"
           />
           <div className="space-y-1">
-            <p className="text-xl font-semibold">Maria Fulana</p>
-            <p className="text-sm text-[#717171]">Bem vindo Maria Fulana!</p>
+            <p className="text-xl font-semibold">Usuário Teste</p>
+            <p className="text-sm text-[#717171]">Bem vindo Usuário Teste!</p>
           </div>
         </div>
         <div className="flex items-center gap-x-5">
@@ -30,7 +30,7 @@ export default function HomePage() {
           </div>
           <div className="flex w-60 items-center justify-between rounded-lg bg-[#EC48994D] p-5">
             <div className="space-y-2">
-              <p className="text-xl">Alunos</p>
+              <p className="text-xl">Turmas</p>
               <p className="text-4xl font-bold">6</p>
             </div>
             <PiPencilRuler className="text-5xl text-[#EC4899]" />

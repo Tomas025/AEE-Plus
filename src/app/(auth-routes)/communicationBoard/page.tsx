@@ -17,7 +17,7 @@ export default function CommunicationBoardPage() {
             onClick={() => setModalOpen(true)}
             className="cursor-pointer rounded-lg bg-blue-500 px-5 py-2.5 font-semibold text-white hover:bg-blue-600 active:bg-blue-700"
           >
-            Criar nova prancha
+            Criar novo card
           </button>
         </div>
         <div>

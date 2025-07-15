@@ -29,7 +29,7 @@ export function ModalAddBoard({ open, onClose }: ModalProps) {
             <FiX />
           </div>
           <header className="text-2xl font-semibold">
-            <h1>Adicionar Nova Prancha</h1>
+            <h1>Adicionar Novo Card</h1>
           </header>
           <main className="my-8 w-full items-center gap-x-10 py-4">
             <div className="flex flex-col">
