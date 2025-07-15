@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function GamesPage() {
   return (
@@ -12,9 +13,12 @@ export default function GamesPage() {
             <p className="mb-5 text-xs">
               Descrição do jogo Descrição do jogo Descrição do jogo
             </p>
-            <button className="cursor-pointer rounded-lg border border-blue-500 px-5 py-2.5 font-medium text-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-700">
+            <Link
+              href={"/playGame"}
+              className="cursor-pointer rounded-lg border border-blue-500 px-5 py-2.5 font-medium text-blue-500 hover:bg-blue-500 hover:text-white active:bg-blue-700"
+            >
               Entrar no jogo
-            </button>
+            </Link>
           </div>
         </div>
         <div>

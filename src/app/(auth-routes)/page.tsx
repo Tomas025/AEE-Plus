@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { FiEdit2, FiTrash2 } from "react-icons/fi";
 import { PiEyeBold, PiPencilRuler, PiStudentBold } from "react-icons/pi";
 
@@ -64,7 +65,9 @@ export default function HomePage() {
           <tbody className="w-full text-sm text-gray-700">
             <tr className="border border-gray-300">
               <td className="px-4 py-6">1</td>
-              <td className="px-4 py-6">Turma 1</td>
+              <td className="px-4 py-6">
+                <Link href={"/viewClass"}>Turma 1</Link>
+              </td>
               <td className="px-4 py-6">5</td>
               <td className="flex gap-x-2 px-4 py-6">
                 <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-xl text-white">
@@ -80,7 +83,9 @@ export default function HomePage() {
             </tr>
             <tr className="border border-gray-300">
               <td className="px-4 py-6">1</td>
-              <td className="px-4 py-6">Turma 1</td>
+              <td className="px-4 py-6">
+                <Link href={"/viewClass"}>Turma 1</Link>
+              </td>
               <td className="px-4 py-6">5</td>
               <td className="flex gap-x-2 px-4 py-6">
                 <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-xl text-white">
@@ -96,7 +101,9 @@ export default function HomePage() {
             </tr>
             <tr className="border border-gray-300">
               <td className="px-4 py-6">1</td>
-              <td className="px-4 py-6">Turma 1</td>
+              <td className="px-4 py-6">
+                <Link href={"/viewClass"}>Turma 1</Link>
+              </td>
               <td className="px-4 py-6">5</td>
               <td className="flex gap-x-2 px-4 py-6">
                 <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-xl text-white">
@@ -112,7 +119,9 @@ export default function HomePage() {
             </tr>
             <tr className="border border-gray-300">
               <td className="px-4 py-6">1</td>
-              <td className="px-4 py-6">Turma 1</td>
+              <td className="px-4 py-6">
+                <Link href={"/viewClass"}>Turma 1</Link>
+              </td>
               <td className="px-4 py-6">5</td>
               <td className="flex gap-x-2 px-4 py-6">
                 <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-xl text-white">
@@ -128,7 +137,9 @@ export default function HomePage() {
             </tr>
             <tr className="border border-gray-300">
               <td className="px-4 py-6">1</td>
-              <td className="px-4 py-6">Turma 1</td>
+              <td className="px-4 py-6">
+                <Link href={"/viewClass"}>Turma 1</Link>
+              </td>
               <td className="px-4 py-6">5</td>
               <td className="flex gap-x-2 px-4 py-6">
                 <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-xl text-white">
@@ -144,7 +155,9 @@ export default function HomePage() {
             </tr>
             <tr className="border border-gray-300">
               <td className="px-4 py-6">1</td>
-              <td className="px-4 py-6">Turma 1</td>
+              <td className="px-4 py-6">
+                <Link href={"/viewClass"}>Turma 1</Link>
+              </td>
               <td className="px-4 py-6">5</td>
               <td className="flex gap-x-2 px-4 py-6">
                 <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-xl text-white">
@@ -160,7 +173,9 @@ export default function HomePage() {
             </tr>
             <tr className="border border-gray-300">
               <td className="px-4 py-6">1</td>
-              <td className="px-4 py-6">Turma 1</td>
+              <td className="px-4 py-6">
+                <Link href={"/viewClass"}>Turma 1</Link>
+              </td>
               <td className="px-4 py-6">5</td>
               <td className="flex gap-x-2 px-4 py-6">
                 <button className="rounded-lg bg-blue-500 px-5 py-2.5 text-xl text-white">

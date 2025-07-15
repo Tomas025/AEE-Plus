@@ -24,7 +24,7 @@ export function ModalAddBoard({ open, onClose }: ModalProps) {
         <form>
           <div
             onClick={onClose}
-            className="absolute top-2 right-2 rounded-lg bg-white p-1 text-gray-400 hover:bg-gray-50 hover:text-gray-600"
+            className="absolute top-2 right-2 cursor-pointer rounded-lg bg-white p-1 text-gray-400 hover:bg-gray-50 hover:text-gray-600"
           >
             <FiX />
           </div>
@@ -73,13 +73,13 @@ export function ModalAddBoard({ open, onClose }: ModalProps) {
                 onClose();
                 // reset();
               }}
-              className="flex w-fit items-center justify-center rounded bg-[#007bff] px-3 py-[6px] font-bold text-white hover:bg-[#0059ff]"
+              className="flex w-fit cursor-pointer items-center justify-center rounded bg-[#007bff] px-3 py-[6px] font-bold text-white hover:bg-[#0059ff]"
             >
               Cancelar
             </button>
             <button
               type="submit"
-              className="flex w-fit items-center justify-center rounded bg-green-500 px-3 py-[6px] font-bold text-white hover:bg-green-700"
+              className="flex w-fit cursor-pointer items-center justify-center rounded bg-green-500 px-3 py-[6px] font-bold text-white hover:bg-green-700"
             >
               Salvar
             </button>
