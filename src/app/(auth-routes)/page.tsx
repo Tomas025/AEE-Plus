@@ -4,7 +4,7 @@ import { PiEyeBold, PiPencilRuler, PiStudentBold } from "react-icons/pi";
 
 export default function HomePage() {
   return (
-    <div className="flex min-h-full w-screen flex-col items-center gap-y-10 p-10">
+    <div className="flex min-h-full flex-col items-center gap-y-10 p-10">
       <div className="flex w-full items-center justify-between">
         <div className="flex items-center gap-x-2.5">
           <Image
