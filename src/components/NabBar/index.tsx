@@ -5,7 +5,9 @@ export function NavBar() {
   return (
     <nav className="flex items-center justify-between bg-blue-500 px-10 py-4 text-white">
       <div className="container flex items-center gap-14">
-        <div className="font-jetbrains-mono text-3xl font-bold">A|E|E</div>
+        <Link href={"/"} className="font-jetbrains-mono text-3xl font-bold">
+          A|E|E
+        </Link>
         <ul className="flex gap-x-6 text-lg font-medium">
           <li>
             <Link href="/" className="hover:text-gray-300">
@@ -13,20 +15,20 @@ export function NavBar() {
             </Link>
           </li>
           <li>
-            <Link href="/about" className="hover:text-gray-300">
+            <Link href="/games" className="hover:text-gray-300">
               Jogos
             </Link>
           </li>
           <li>
-            <Link href="/contact" className="hover:text-gray-300">
+            <Link href="/communicationBoard" className="hover:text-gray-300">
               Pranchas
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/contact" className="hover:text-gray-300">
               Gerenciar escolas
             </Link>
-          </li>
+          </li> */}
         </ul>
       </div>
       <div className="flex items-center gap-3">
@@ -38,7 +40,9 @@ export function NavBar() {
           className="rounded-full"
         />
         <div className="whitespace-nowrap">
-          <p className="font-bold">Maria Fulana</p>
+          <Link href={"/viewProfile"} className="font-bold">
+            Maria Fulana
+          </Link>
           <p className="text-sm font-semibold text-gray-300">Professor (a)</p>
         </div>
       </div>
