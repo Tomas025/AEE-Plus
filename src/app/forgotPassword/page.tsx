@@ -32,7 +32,7 @@ export default function ForgotPasswordPage() {
         </p>
         <form
           onSubmit={(e) => {
-            push("/");
+            push("/newPassword");
             e.preventDefault();
           }}
           className="flex w-3/5 flex-col items-center gap-y-10"

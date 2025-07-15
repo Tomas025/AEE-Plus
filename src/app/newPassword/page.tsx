@@ -1,9 +1,8 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export default function LoginPage() {
+export default function NewPasswordPage() {
   const { push } = useRouter();
 
   return (
@@ -24,46 +23,38 @@ export default function LoginPage() {
       </div>
       <div className="flex min-h-screen w-1/2 flex-col items-center justify-center p-10">
         <div className="mb-12 flex flex-col items-center justify-center">
-          <p className="text-3xl font-bold">Entrar</p>
+          <p className="text-3xl font-bold">Defina uma nova senha</p>
           <div className="w-40 rounded-full border-3 border-blue-500" />
         </div>
         <form
           onSubmit={(e) => {
-            push("/");
+            push("/login");
             e.preventDefault();
           }}
           className="flex w-3/5 flex-col items-center gap-y-10"
         >
           <div className="flex w-full flex-col gap-y-1 text-xl">
-            <label htmlFor="email">Email</label>
+            <label htmlFor="password">Senha</label>
             <input
-              id="email"
-              type="email"
+              id="password"
+              type="password"
               className="rounded-md bg-gray-200 px-1 py-2"
             />
           </div>
-          <div className="flex w-full flex-col items-end gap-y-1">
-            <div className="flex w-full flex-col gap-y-1 text-xl">
-              <label htmlFor="password">Senha</label>
-              <input
-                id="password"
-                type="password"
-                className="rounded-md bg-gray-200 px-1 py-2"
-              />
-            </div>
-            <Link
-              href={"/forgotPassword"}
-              className="text-blue-600 hover:underline"
-            >
-              Recuperar Senha
-            </Link>
+          <div className="flex w-full flex-col gap-y-1 text-xl">
+            <label htmlFor="repeatPassword">Confirme a senha</label>
+            <input
+              id="repeatPassword"
+              type="password"
+              className="rounded-md bg-gray-200 px-1 py-2"
+            />
           </div>
 
           <button
             type="submit"
             className="w-1/2 cursor-pointer rounded-lg bg-blue-500 p-2.5 text-white hover:bg-blue-600 active:bg-blue-700"
           >
-            Entrar
+            Salvar
           </button>
         </form>
       </div>
