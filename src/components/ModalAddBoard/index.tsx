@@ -1,6 +1,8 @@
 "use client";
 import { FiX } from "react-icons/fi";
 
+import { useModalAddBoard } from "./hooks/useModalAddBoard";
+
 // import { useModalSchedule } from "../ModalSchedule/hooks/useModalSchedule";
 
 type ModalProps = {
@@ -9,7 +11,15 @@ type ModalProps = {
 };
 
 export function ModalAddBoard({ open, onClose }: ModalProps) {
-  // const { handleSubmit, register, reset, submitForm } = useModalSchedule();
+  const {
+    handleSubmit,
+    register,
+    reset,
+    audioFile,
+    imageFile,
+    // isSubmitting,
+    submitForm,
+  } = useModalAddBoard();
   return (
     <div
       onClick={onClose}
@@ -23,7 +33,7 @@ export function ModalAddBoard({ open, onClose }: ModalProps) {
       >
         <form>
           <div
-            onClick={onClose}
+            onClick={handleSubmit(submitForm)}
             className="absolute top-2 right-2 cursor-pointer rounded-lg bg-white p-1 text-gray-400 hover:bg-gray-50 hover:text-gray-600"
           >
             <FiX />
@@ -40,6 +50,8 @@ export function ModalAddBoard({ open, onClose }: ModalProps) {
                 id="nome"
                 type="text"
                 className="rounded-md border border-gray-600 p-1"
+                {...register("nome", { required: true })}
+                required
               />
             </div>
             <div className="flex flex-col">
@@ -50,9 +62,18 @@ export function ModalAddBoard({ open, onClose }: ModalProps) {
                 htmlFor="imagem"
                 className="rounded-md border border-gray-600 p-1 text-gray-500"
               >
-                Escolha uma imagem
+                {!imageFile || imageFile.length === 0
+                  ? "Escolha uma imagem"
+                  : imageFile[0].name}
               </label>
-              <input id="imagem" type="file" className="hidden" />
+              <input
+                id="imagem"
+                type="file"
+                className="hidden"
+                accept="image/png, image/jpeg, image/jpg"
+                {...register("imagem", { required: true })}
+                required
+              />
             </div>
             <div className="flex flex-col">
               <label htmlFor="audio" className="font-medium">
@@ -62,16 +83,25 @@ export function ModalAddBoard({ open, onClose }: ModalProps) {
                 htmlFor="audio"
                 className="rounded-md border border-gray-600 p-1 text-gray-500"
               >
-                Escolha um audio
+                {!audioFile || audioFile.length === 0
+                  ? "Escolha um audio"
+                  : audioFile[0].name}
               </label>
-              <input id="audio" type="file" className="hidden" />
+              <input
+                id="audio"
+                type="file"
+                accept="audio/*"
+                className="hidden"
+                {...register("audio", { required: true })}
+                required
+              />
             </div>
           </main>
           <div className="flex justify-end gap-x-3">
             <button
               onClick={() => {
                 onClose();
-                // reset();
+                reset();
               }}
               className="flex w-fit cursor-pointer items-center justify-center rounded bg-[#007bff] px-3 py-[6px] font-bold text-white hover:bg-[#0059ff]"
             >

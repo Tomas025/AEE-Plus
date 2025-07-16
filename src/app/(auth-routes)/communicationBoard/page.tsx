@@ -5,8 +5,11 @@ import { FiPlay } from "react-icons/fi";
 
 import { ModalAddBoard } from "@/components/ModalAddBoard";
 
+import { useCommunicationBoard } from "./hooks/useCommunicationBoard";
+
 export default function CommunicationBoardPage() {
   const [modalOpen, setModalOpen] = useState(false);
+  const { isLoading } = useCommunicationBoard();
 
   return (
     <>
@@ -20,7 +23,8 @@ export default function CommunicationBoardPage() {
             Criar novo card
           </button>
         </div>
-        <div>
+        <div className="mt-4 grid grid-cols-5 gap-4">
+          {isLoading && <p>Carregando...</p>}
           <div className="flex h-60 w-48 flex-col items-center rounded-lg bg-white p-4">
             <p className="font-medium">Maçã</p>
             <Image width={154} height={121} src={"/image 7.png"} alt="maçã" />
@@ -29,8 +33,8 @@ export default function CommunicationBoardPage() {
             </button>
           </div>
         </div>
+        <ModalAddBoard onClose={() => setModalOpen(false)} open={modalOpen} />
       </div>
-      <ModalAddBoard onClose={() => setModalOpen(false)} open={modalOpen} />
     </>
   );
 }

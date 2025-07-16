@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
+    "@tanstack/react-query": "^5.83.0",
     "axios": "^1.10.0",
     "next": "^15.3.5",
     "next-auth": "^4.24.11",
@@ -19,6 +20,7 @@
     "react-hook-form": "^7.60.0",
     "react-icons": "^5.5.0",
     "react-toastify": "^11.0.5",
+    "use-sound": "^5.0.0",
     "zod": "^3.25.76"
   },
   "devDependencies": {
@@ -26,6 +28,7 @@
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
+    "@tanstack/eslint-plugin-query": "^5.81.2",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
